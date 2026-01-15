@@ -1,0 +1,128 @@
+🧩 ERP Mini (Laravel) + Marketplace API Simulation
+
+A lightweight and stable Laravel-based Mini ERP application that demonstrates core ERP workflows—product management, inventory movements, order processing, and simulated marketplace integration—designed for internship and junior web developer recruitment.
+
+🧠 Extended Description
+
+ERP Mini (Laravel) + Marketplace API Simulation is a responsive web application built with Laravel and SQLite to simulate a simplified yet realistic ERP system commonly found in small to medium businesses. The project focuses on demonstrating practical Laravel fundamentals such as migrations, seeders, Form Request validation, structured CRUD operations, and clean application flow, while avoiding unnecessary complexity that could introduce instability. Core ERP modules include Products management, Inventory stock movements (in/out), Orders with a clear status workflow (new, packed, shipped, done), and a Marketplace Sync feature implemented as a safe mock using local JSON imports and local status logs instead of real external APIs. This approach highlights an understanding of ERP concepts and API integration patterns without exposing the application to risks like token expiration, rate limits, or third-party service failures, making the project stable, easy to test, and highly suitable as a job-ready portfolio for Laravel-based roles.
+
+📄 Short Description
+
+A responsive Laravel + SQLite mini ERP featuring Products, Inventory movements, Orders workflow, and a mock marketplace integration using local JSON, built to demonstrate job-ready Laravel and ERP fundamentals.
+
+🎯 Project Goals (For Recruiters)
+
+This project is intended to demonstrate:
+
+Laravel fundamentals (routing, controllers, Blade, validation)
+
+ERP-style business flow (products → inventory → orders)
+
+Clean CRUD structure with migrations and seeders
+
+Safe API integration concepts using mock data
+
+Stable, low-risk architecture suitable for real work environments
+
+🧩 Main Features
+1️⃣ Products
+
+Create, read, update, and delete products
+
+SKU-based identification
+
+Basic search and listing
+
+Validation to ensure data consistency
+
+2️⃣ Inventory Management
+
+Stock In and Stock Out transactions
+
+Automatic stock calculation based on movement history
+
+Prevention of invalid stock operations (e.g. negative stock)
+
+3️⃣ Orders
+
+Order creation with product snapshot
+
+Status workflow: new → packed → shipped → done
+
+Simple, readable order lifecycle
+
+4️⃣ Marketplace Sync (Mock)
+
+Import orders from a local JSON file
+
+Simulated status push recorded in local logs
+
+No real API calls, tokens, or external dependencies
+
+🗂️ Database Structure (SQLite)
+
+products: product master data
+
+inventory_movements: stock in/out history
+
+orders: order headers and status
+
+order_items: product details per order
+
+marketplace_push_logs: simulated API status updates
+
+All tables are created using Laravel migrations and populated with seeders for initial testing.
+
+📱 Mobile & UX
+
+Responsive, mobile-first layout
+
+Desktop sidebar and mobile-friendly navigation
+
+Ready for PWA enhancement
+
+Clear forms with validation feedback
+
+🧪 How to Use (Quick Guide)
+
+Open Dashboard to see overall summary
+
+Add a Product
+
+Record Stock In to increase inventory
+
+Import mock orders from a JSON file
+
+Update order status and review marketplace sync logs
+
+This flow mirrors a simplified real-world ERP usage scenario.
+
+✅ Testing Checklist
+
+Import mock orders → orders appear correctly
+
+Update order status → status log is created
+
+Invalid form input → validation error shown, data preserved
+
+Stock out exceeding available stock → operation blocked
+
+Empty database → UI shows empty state, not errors
+
+🛡️ Stability & Anti-Error Design
+
+Laravel migrations and seeders for predictable setup
+
+Form Request validation for all critical inputs
+
+Simple queries, no heavy joins or background jobs
+
+Mock marketplace integration to avoid external failures
+
+🏷️ Topics
+
+laravel · php · sqlite · erp · crud · inventory-management · order-management · api-simulation · portfolio-project · job-ready
+
+👤 Recruiter Notes
+
+This project is intentionally designed to be simple, stable, and realistic, prioritizing clarity and correctness over excessive features. It reflects how junior or internship-level developers are expected to build maintainable internal systems using Laravel while understanding business processes such as inventory control and order handling.
